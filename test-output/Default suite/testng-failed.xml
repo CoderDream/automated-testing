@@ -3,11 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.test.CustomerTest">
+      <class name="com.billjc.pdrc.service.LoginServiceTest">
         <methods>
-          <include name="testChrome"/>
+          <include name="login"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.test.CustomerTest -->
+      </class> <!-- com.billjc.pdrc.service.LoginServiceTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
