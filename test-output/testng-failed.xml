@@ -6,6 +6,7 @@
       <class name="com.billjc.pdrc.service.LoginServiceTest">
         <methods>
           <include name="login"/>
+          <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.billjc.pdrc.service.LoginServiceTest -->

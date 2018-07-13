@@ -21,7 +21,7 @@ public class DriverUtil {
 		WebDriver driver = new ChromeDriver(option);
 
 		// 设置10秒
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		// 自定义浏览器窗口大小
 		// driver.manage().window().setSize(new Dimension(540, 720));
 		// 浏览器最大化
@@ -29,4 +29,6 @@ public class DriverUtil {
 
 		return driver;
 	}
+	
+	
 }

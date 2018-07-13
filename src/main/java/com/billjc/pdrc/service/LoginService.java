@@ -7,24 +7,6 @@ import com.billjc.pdrc.util.PropertyUtil;
 
 public class LoginService {
 
-	private WebDriver driver;
-
-	public WebDriver getDriver() {
-		return driver;
-	}
-
-	public void setDriver(WebDriver driver) {
-		this.driver = driver;
-	}
-
-	/**
-	 * 打开登录页面
-	 */
-	public void openLoginPage() {
-		String baseUrl = PropertyUtil.getValue("config.properties", "base_url");// "http://10.100.254.162:8099/common-rbac/function/";
-		driver.get(baseUrl);
-	}
-
 	/**
 	 * 输入员工号密码，登录系统
 	 * 
@@ -32,7 +14,8 @@ public class LoginService {
 	 * @param password
 	 * @throws Exception
 	 */
-	public void login(String workId, String password) throws Exception {
+	public void login(WebDriver driver, String workId, String password)
+			throws Exception {
 		// 1、输入员工号密码
 		driver.findElement(By.id("SignName")).clear();
 		driver.findElement(By.id("SignName")).sendKeys(workId);
@@ -44,6 +27,21 @@ public class LoginService {
 
 		// 3、点击【登录】按钮
 		driver.findElement(By.id("btn_SignIn")).click();
+	}
+
+	/**
+	 * 打开指定页面
+	 * 
+	 * @param pageUrl
+	 */
+	public void openPage(WebDriver driver, String pageUrl) {
+		String baseUrl = PropertyUtil.getValue("config.properties", "base_url");// "http://10.100.254.162:8099/common-rbac/function/";
+		driver.get(baseUrl + pageUrl);
+	}
+
+	public void openPageByLinkText(WebDriver driver, String linkText) {
+		// 链接文字
+		driver.findElement(By.linkText(linkText)).click();
 	}
 
 }
