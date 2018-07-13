@@ -53,6 +53,5 @@ public class LoginServiceTest {
 		Runtime.getRuntime().exec("taskkill /F /im " + "chromedriver.exe");
 		// Runtime.getRuntime().exec("taskkill /F /im " + "chrome.exe");
 		// 结束进程。以上是用于在发生异常时结束chromedriver进程，避免chromedriver占用内存资源。close()，和quit()方法有时候是无法结束chromedriver进程的。
-
 	}
 }
