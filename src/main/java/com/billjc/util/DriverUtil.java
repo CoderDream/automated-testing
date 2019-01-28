@@ -1,4 +1,4 @@
-package com.billjc.pdrc.util;
+package com.billjc.util;
 
 import java.util.concurrent.TimeUnit;
 

@@ -15,6 +15,6 @@ public class ChromeTest {
 		WebDriver driver = new ChromeDriver();
 		String baseUrl = "https://www.baidu.com/";
 		driver.get(baseUrl);
-		//driver.quit();
+		driver.quit();
 	}
 }

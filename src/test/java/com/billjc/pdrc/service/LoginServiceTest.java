@@ -5,7 +5,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.billjc.pdrc.util.DriverUtil;
+import com.billjc.util.DriverUtil;
 
 public class LoginServiceTest {
 
@@ -33,24 +33,24 @@ public class LoginServiceTest {
 
 		loginService.login(driver, workId, password);
 
-		Thread.sleep(3000);
+		// Thread.sleep(3000);
 		// 项目BSM分配 /PDRC_Project/PDRC_ProjectList
-		String linkText = "项目BSM分配";
-		loginService.openPageByLinkText(driver, linkText);
+		//String linkText = "项目BSM分配";
+		//loginService.openPageByLinkText(driver, linkText);
 
 		// D-00105-20161230-60
-		String projectNewNo = "D-00105-20161230-60";
-		prizeService.dispatchBsm(driver, projectNewNo);
+		//String projectNewNo = "D-00105-20161230-60";
+		//prizeService.dispatchBsm(driver, projectNewNo);
 
-		prizeService.bsmDetail(driver, projectNewNo);
+		//prizeService.bsmDetail(driver, projectNewNo);
 
 	}
 
 	@AfterClass
 	public void tearDown() throws Exception {
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		driver.quit();
-		Runtime.getRuntime().exec("taskkill /F /im " + "chromedriver.exe");
+		//Runtime.getRuntime().exec("taskkill /F /im " + "chromedriver.exe");
 		// Runtime.getRuntime().exec("taskkill /F /im " + "chrome.exe");
 		// 结束进程。以上是用于在发生异常时结束chromedriver进程，避免chromedriver占用内存资源。close()，和quit()方法有时候是无法结束chromedriver进程的。
 	}

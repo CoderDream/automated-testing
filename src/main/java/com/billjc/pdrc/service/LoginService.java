@@ -3,7 +3,7 @@ package com.billjc.pdrc.service;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import com.billjc.pdrc.util.PropertyUtil;
+import com.billjc.util.PropertyUtil;
 
 public class LoginService {
 
